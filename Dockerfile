@@ -125,6 +125,8 @@ RUN --mount=type=cache,target="${DENO_DIR}" \
 
 FROM debian:13-slim AS app
 
+RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates curl iproute2 && rm -rf /var/lib/apt/lists/*
+
 # Copy group file for the non-privileged user from the user-stage
 COPY --from=user-stage /etc/group /etc/group
 
