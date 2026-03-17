@@ -8,6 +8,7 @@
     "lint": "deno lint src/**"
   },
   "imports": {
+    "@hono/hono": "npm:hono@4",
     "@std/cli": "jsr:@std/cli@^1.0.17",
     "hono": "jsr:@hono/hono@4.7.4",
     "@std/toml": "jsr:@std/toml@1.0.2",
